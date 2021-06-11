@@ -1,0 +1,130 @@
+@import './imports/colors';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $grey;
+    padding: 5em 0;
+    flex-direction: column;
+    min-height: 100vh;
+    .title h1 {
+        color: $black;
+        font-size: 20px;
+    }
+    .card {
+        background-color: $white;
+        margin-top: 25px;
+        padding: 2em;
+        border-radius: 15px;
+        width: 50%;
+        .add_btn {
+            width: 100%;
+            text-align: center;
+            margin-top: 75px;
+        }
+    }
+}
+
+.ant-list-split .ant-list-item {
+    border-bottom: 0;
+    background: $light;
+    margin: 15px 0;
+    border-radius: 15px;
+    padding: 15px 25px;
+    .ant-list-item-meta-title,
+    .ant-list-item-meta-description {
+        color: $black;
+    }
+    &.done {
+        background-color: $green;
+        .ant-list-item-meta-title,
+    .ant-list-item-meta-description{
+
+        color: $white;
+    }
+    }
+    &.deleted {
+        .ant-list-item-meta-title,
+    .ant-list-item-meta-description{
+
+        color: $white;
+    }
+        background-color: $red;
+        color: $white;
+    }
+}
+
+.ant-list-item-meta-title {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.success {
+    background-color: $green;
+    border-color: $green;
+}
+.ant-btn-dangerous.ant-btn-primary {
+    background-color: $red;
+    border-color: $red;
+}
+
+.ant-list-item-action-split {
+    display: none;
+}
+
+.ant-modal-content {
+    border-radius: 15px;
+    .ant-modal-close-x {
+        display: none;
+    }
+    .add_form {
+        display: flex;
+        justify-content: space-between;
+        .ant-input {
+            width: 65%;
+            border-radius: 10px;
+            background-color: $grey;
+            border: 0;
+        }
+        .actions {
+            width: 30%;
+            justify-content: space-around;
+            display: flex;
+        }
+    }
+}
+
+.btn {
+    border-radius: 10px;
+    border: 0 ;
+    width: 45%;
+    &:hover {
+        cursor: pointer;
+    }
+    &-danger {
+        background-color: rgba(238, 110, 110, 0.377);
+        color: $red;
+    }
+    &-success {
+        background-color: rgba(62, 184, 62, 0.397);
+        color: green;
+    }
+}
+
+.ant-input:placeholder-shown {
+    font-weight: bold;
+}
+
+.outline {
+    background-color: $white;
+    border: 0;
+    svg {
+        fill: $red;
+    }
+}
